@@ -1,3 +1,9 @@
 import './main.html';
-import { greetUser } from '../imports/utils';
-console.log(greetUser());
+import Default, { greetUser, name } from '../imports/utils';
+import { add } from '../imports/math';
+console.log({
+  greetUser: greetUser(),
+  name,
+  math: add(2, 2),
+  Default
+});
