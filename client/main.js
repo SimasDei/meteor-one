@@ -21,13 +21,19 @@ const players = [
   }
 ];
 
+const playerList = players =>
+  players.map(player => (
+    <li key={player._id}>
+      Player: {player.name} Score: {player.score}
+    </li>
+  ));
+
 Meteor.startup(() => {
-  const name = 'Simas';
   let jsx = (
     <div>
       <h1>Scorify</h1>
-      <p>Lol {name}</p>
-      {[<p>1</p>, <p>2</p>]}
+      <h3>Players</h3>
+      <ul>{playerList(players)}</ul>
     </div>
   );
   ReactDOM.render(jsx, document.querySelector('#app'));
