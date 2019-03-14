@@ -17,11 +17,27 @@ Meteor.startup(() => {
         </li>
       ));
 
+    const handleSubmit = e => {
+      e.preventDefault();
+      let playerName = e.target.playerName.value;
+      if (playerName) {
+        e.target.playerName.value = '';
+        Players.insert({
+          name: playerName,
+          score: 0
+        });
+      }
+    };
+
     let jsx = (
       <div>
         <h1>Scorify</h1>
         <h3>Players</h3>
         <ul>{playerList(players)}</ul>
+        <form onSubmit={handleSubmit}>
+          <input type="text" name="playerName" placeholder="Player Name" />
+          <button>Add Player</button>
+        </form>
       </div>
     );
     ReactDOM.render(jsx, document.querySelector('#app'));
