@@ -8,7 +8,7 @@ export class App extends Component {
     const { players } = this.props;
     return (
       <div>
-        <TitleBar title="Scorify" subtitle="Players" />
+        <TitleBar title="Scorify" />
         <PlayerList players={players} />
         <AddPlayer />
       </div>
