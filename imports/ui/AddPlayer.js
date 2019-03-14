@@ -17,7 +17,7 @@ export class AddPlayer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="item">
         <form onSubmit={this.handleSubmit}>
           <input type="text" name="playerName" placeholder="Player Name" />
           <button>Add Player</button>

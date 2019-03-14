@@ -4,7 +4,11 @@ import Player from './Player';
 export class PlayerList extends Component {
   playerList = () => {
     if (this.props.players.length === 0) {
-      return <p>No Current Players</p>;
+      return (
+        <div className="item">
+          <p>No Current Players</p>
+        </div>
+      );
     } else
       return this.props.players.map(player => (
         <Player key={player._id} player={player} />
@@ -12,7 +16,7 @@ export class PlayerList extends Component {
   };
 
   render() {
-    return <ul>{this.playerList()}</ul>;
+    return this.playerList();
   }
 }
 
