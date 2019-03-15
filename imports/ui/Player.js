@@ -10,16 +10,23 @@ export class Player extends Component {
           Player: {player.name} Score: {player.score}
         </p>
         <button
+          className="button button--round"
           onClick={() => Players.update(player._id, { $inc: { score: 1 } })}
         >
-          +
+          +1
         </button>
         <button
+          className="button button--round"
           onClick={() => Players.update(player._id, { $inc: { score: -1 } })}
         >
-          -
+          -1
         </button>
-        <button onClick={() => Players.remove({ _id: player._id })}>X</button>
+        <button
+          className="button button--round"
+          onClick={() => Players.remove({ _id: player._id })}
+        >
+          X
+        </button>
       </div>
     );
   }

@@ -6,7 +6,7 @@ export class PlayerList extends Component {
     if (this.props.players.length === 0) {
       return (
         <div className="item">
-          <p>No Current Players</p>
+          <p className="item__message">No Current Players, Add some !</p>
         </div>
       );
     } else
