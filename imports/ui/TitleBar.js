@@ -7,7 +7,9 @@ class TitleBar extends React.Component {
       <div className="title-bar">
         <div className="wrapper">
           <h1>{title}</h1>
-          {subtitle ? <h3>{subtitle}</h3> : null}
+          {subtitle ? (
+            <h3 className="title-bar__subtitle">{subtitle}</h3>
+          ) : null}
         </div>
       </div>
     );

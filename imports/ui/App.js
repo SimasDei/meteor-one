@@ -8,7 +8,7 @@ export class App extends Component {
     const { players } = this.props;
     return (
       <div>
-        <TitleBar title="Scorify" />
+        <TitleBar title="Scorify" subtitle="First Meteor App" />
         <div className="wrapper">
           <PlayerList players={players} />
           <AddPlayer />
