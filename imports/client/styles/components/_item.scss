@@ -3,6 +3,7 @@
   border: 1px solid #e8e8e8;
   margin-bottom: 1.5rem;
   padding: 1.5rem;
+  color: #2c2b2b;
 }
 
 .item__message {
@@ -10,4 +11,17 @@
   font-style: italic;
   font-weight: 300;
   text-align: center;
+}
+
+.item--position-1 {
+  background-color: $green-alt;
+  border-color: $green;
+}
+.item--position-2 {
+  background-color: $blue-alt;
+  border-color: $blue;
+}
+.item--position-3 {
+  background-color: $red-alt;
+  border-color: $red;
 }
