@@ -4,13 +4,17 @@ import ReactDOM from 'react-dom';
 import { Meteor } from 'meteor/meteor';
 import { Tracker } from 'meteor/tracker';
 
-import Players from '../imports/api/players';
+import Players, { calculatePlayerPosition } from '../imports/api/players';
 
 import App from '../imports/ui/App';
 Meteor.startup(() => {
   Tracker.autorun(() => {
     let players = Players.find({}, { sort: { score: -1 } }).fetch();
+    let positionedPlayers = calculatePlayerPosition(players);
 
-    ReactDOM.render(<App players={players} />, document.querySelector('#app'));
+    ReactDOM.render(
+      <App players={positionedPlayers} />,
+      document.querySelector('#app')
+    );
   });
 });

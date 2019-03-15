@@ -9,7 +9,10 @@ export class Player extends Component {
         <div className="player">
           <div>
             <h3 className="player__name">{player.name}</h3>
-            <p className="player__stats">Score: {player.score}</p>
+            <p className="player__stats">
+              Rank: {player.rank} Position: {player.position} Score:{' '}
+              {player.score}
+            </p>
           </div>
           <div className="player__actions">
             <button
